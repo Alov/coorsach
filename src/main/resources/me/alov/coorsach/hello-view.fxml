@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="372.0" prefWidth="784.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.alov.coorsach.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="lastNameInput" promptText="Фамилия" />
+            <TextField fx:id="firstNameInput" promptText="Имя" style="-fx-margin: 10;" />
+            <TextField fx:id="middleNameInput" promptText="Отчество" />
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveStudents" text="Save" />
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addStudent" text="Add" />
+         </children>
+      </HBox>
+      <TableView fx:id="studentsTable" prefHeight="200.0" prefWidth="538.0">
+        <columns>
+          <TableColumn fx:id="lastNameColumn" prefWidth="75.0" style="color: red;" text="Фамилия" />
+          <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="Имя" />
+            <TableColumn fx:id="middleNameColumn" prefWidth="75.0" text="Отчество" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
